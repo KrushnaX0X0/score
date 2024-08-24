@@ -3,25 +3,59 @@ import './Home.css'
 import Card from '../../components/cards/Card'
 import imgking from '../../components/cards/king.png'
 import shildimg from '../../components/cards/shield.png'
+import close from './back.png'
 
-
-const Winnercard = ({score1,score2})=>{
-  if (score1 == score2){
-    return <div>it' a tid</div>
-  }
-  return(
-    <div>
-      
-     { score1 > score2 ? "team 1 Won":"team 2 won "}
-
-    </div>
-  )
-}
 
 
 
 
 function Home() {
+
+
+  
+const Winnercard = ({score1,score2})=>{
+  let winner ="";
+
+  if (score1 == score2){
+    winner="Match is Draw"
+  }
+  else if (score1>score2){
+    winner="Team 1 is Won"
+  }
+  else{
+    winner="Team 2 Won"
+  }
+    
+  
+  return(
+    <div className='winer-card'>
+      <img src={close} className='close-img' onClick={()=>{
+        setshowwinwer(false)
+      }} />
+    <div className='winer-text'>
+    
+     { winner}
+     </div>
+
+    </div>
+  )
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const[Team1score,setTeam1Score] = useState(0)
     const[Team2score,setTeam2Score] = useState(0)
     const [showwiner,setshowwinwer] = useState(false)
@@ -43,11 +77,10 @@ function Home() {
           />
           </div>
 
-          <button type='button' className='app-btn '>
+          <button type='button' className='app-btn ' onClick={()=>setshowwinwer(true)}>
             Who won ?   
           </button>
-          <Winnercard   score1={Team1score}  score2={Team2score}/>
-
+      { showwiner?  <Winnercard   score1={Team1score}  score2={Team2score}/>:null}
     </div>
     
   )
