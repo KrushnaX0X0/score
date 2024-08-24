@@ -1,27 +1,60 @@
-import React ,{useState}from 'react'
+import React ,{useEffect, useState}from 'react'
 import './Card.css'
 import plushimg from './plus.png'
 import minus from './minus.png'
 
-function Card() {
-  const [quentity,setquentity]= useState(1);
+
+
+
+
+
+
+
+
+
+
+
+
+function Card({teamName,img,info,newscore}) {
+  const [score,setscore]= useState(1);
+
+  const updatequentity = (type)=>{
+    if (type == "plus"){
+      setscore(score + 1)
+    }
+    else if (type == "minus"){
+      setscore(score-1)
+
+    }
+
+  }
+  useEffect(()=>{
+  newscore(score)
+  },[score]);
+
+
+
   return (
     <div className='card-continer'>
-        <div className='icon'> ⚔ </div>
-        <p className='text-center info'>nashik fiters</p>
+        <img src={img} className='icon'/>  
+        <p className='text-center info'>{teamName}</p>
+        <p className='text-center text-whit'> {info} </p>
 
         <div className='quentiner-continer'>
           <img src={minus} className='img-que'
-                onClick={()=>setquentity(quentity-1)}
+                onClick={()=>updatequentity("minus")}></img>
+          <p className='quentity'> {score}  </p>
           
-          ></img>
-          <p className='quentity'> {quentity}  </p>
           <img src={plushimg}
            className='img-que'
-           onClick={()=>setquentity(quentity + 1)}
-      ></img>
-
+           onClick={()=>updatequentity("plus") }></img>
+       
         </div>
+       
+       
+       
+
+        
 
 
 

@@ -2,8 +2,11 @@
   text-align: center;
 }
 .text-prime{
-  color:#1E201E;
+  color:#fff;
 }
 body{
-  background-color: #ECDFCC;
+  background-color: #5f5959;
+}
+.text-whit{
+  color:#000;
 }

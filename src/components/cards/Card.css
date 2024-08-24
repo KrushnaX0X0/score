@@ -1,12 +1,22 @@
+
+
+
 .card-continer{
-    height: 40vh;
-    width: 20vw;
-    background-color: #697565;
+    height: 300px;
+    width: 200px;
+    background-color: #d6cbcb;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px #585e58;
+    box-shadow: 10px 10px 20px #9caa9c;
+    padding: 10px;
+    margin: 20px auto;
+
+   
    
 }
 .icon{
+    height: 10vh;
+    display: block;
+    margin: 0 auto;
     font-size: 4vw;
     color: white;
     text-align: center;
@@ -23,13 +33,28 @@
 }
 .info {
     height: 8vh;
-    color: white;
+    color:#000;
+    font-size:1.3em;
 }
 .img-que{
     margin: 0 20px;
 }
 .quentity{
-    font-size: 2.5vw;
+    font-size: 2.5em;
     font-weight: 900;
-    color: white;
+    color:#000  ;
+
+}
+.app-btn{
+padding: 10px 40px;
+display: block;
+margin: 0 auto;
+cursor: pointer;
+background-color: #C3AED6;
+border: none;
+border-radius: 10px;
+font-size: 1.2em;
+}
+.app-btn:hover{
+    background-color: #8675A9;
 }
