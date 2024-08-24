@@ -1,0 +1,33 @@
+.card-continer{
+    height: 40vh;
+    width: 20vw;
+    background-color: #697565;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #585e58;
+   
+}
+.icon{
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    
+}
+.quentiner-continer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quentiner-continer img {
+    height: 6vh;
+}
+.info {
+    height: 8vh;
+    color: white;
+}
+.img-que{
+    margin: 0 20px;
+}
+.quentity{
+    font-size: 2.5vw;
+    font-weight: 900;
+}
