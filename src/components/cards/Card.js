@@ -11,11 +11,15 @@ function Card() {
         <p className='text-center info'>nashik fiters</p>
 
         <div className='quentiner-continer'>
-          <img src={minus} className='img-que'></img>
+          <img src={minus} className='img-que'
+                onClick={()=>setquentity(quentity-1)}
+          
+          ></img>
           <p className='quentity'> {quentity}  </p>
-          <img src={plushimg} className='img-que' onClick={()=>{
-
-          }}></img>
+          <img src={plushimg}
+           className='img-que'
+           onClick={()=>setquentity(quentity + 1)}
+      ></img>
 
         </div>
 
